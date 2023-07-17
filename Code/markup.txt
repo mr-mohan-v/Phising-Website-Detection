@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>Oops! Bad link.</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/favicon.svg">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/all.min.css">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/theme.min.css">
+</head>
+<body class="bg-img-hero-fixed" style="background-image: url(https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/error-404.svg);">
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="header header-bg-transparent header-abs-top py-3">
+        <div class="header-section">
+            <div id="logoAndNav" class="container">
+                <nav class="navbar">
+                    <a class="navbar-brand" href="#" aria-label="Front">
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ========== END HEADER ========== -->
+    <!-- ========== MAIN ========== -->
+    <main id="content" role="main">
+        <!-- Hero Section -->
+        <div class="d-lg-flex">
+            <div class="container d-lg-flex align-items-lg-center min-vh-lg-100 space-4">
+                <div class="w-lg-60 w-xl-70">
+                    <!-- Title -->
+                    <div class="mb-4">
+                        <img class="max-w-23rem mb-3" src="https://caniphish.s3.ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/error-number-404.svg" alt="SVG Illustration">
+                        <p class="lead" style="max-width: 500px;">Oops! Looks like you followed a bad link.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Hero Section -->
+    </main>
+    <!-- ========== END MAIN ========== -->
+    <!-- ========== FOOTER ========== -->
+    <!--<footer class="right-0 bottom-0 left-0">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center space-1">-->
+                <!-- Copyright -->
+                <!--<p class="small text-muted mb-0">© Copyright 2023. Can I Phish Pty Ltd. All rights reserved.</p>-->
+                <!-- End Copyright -->
+            <!--</div>
+        </div>
+    </footer>-->
+    <!-- ========== END FOOTER ========== -->
+    <!-- JS Global Compulsory  -->
+    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/jquery.min.js"></script>
+    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/jquery-migrate.min.js"></script>
+    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <!-- JS Front -->
+    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/theme.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            uri = "https://awo0vrpjg3.execute-api.ap-southeast-2.amazonaws.com/default/caniphish-phish-response" + document.location.search;
+            console.log(uri);
+
+            if (/[?&]t=/.test(location.search)) {
+                $.ajax({
+                    url: uri,
+                    type: 'GET',
+                    dataType: "jsonp",
+                    success: function (response) {
+                        console.log(response); // server response
+                    }
+
+                });
+            }
+        });
+    </script>
+</body>
+</html>
