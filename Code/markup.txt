@@ -1,92 +1,736 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <!-- Title -->
-    <title>Oops! Bad link.</title>
-
-    <!-- Required Meta Tags Always Come First -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="noindex, nofollow">
+    
+    <meta charset="utf-8">
+    <title>Log into Facebook | Facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="/favicon.svg">
+    <style>
+    ._4ki._6-j li {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/favicon.svg">
+    #pageFooter {
+      color: #737373;
+      margin: 0 auto;
+      max-width: 980px
+    }
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    #pageFooter a {
+      text-decoration: none;
+      white-space: nowrap
+    }
 
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/all.min.css">
+    #pageFooter a:last-child {
+      margin-right: 0
+    }
 
-    <!-- CSS Front Template -->
-    <link rel="stylesheet" href="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/theme.min.css">
+    #pageFooter a:hover {
+      text-decoration: underline
+    }
+
+    #pageFooter .pageFooterLinkList {
+      line-height: 1.6;
+      margin-left: -20px;
+      margin-right: -20px
+    }
+
+    #contentCurve {
+      border-bottom: 1px solid #dddfe2;
+      font-size: 1px;
+      height: 8px;
+      margin-bottom: 8px
+    }
+
+    ._30ny {
+      padding: 80px 0
+    }
+
+    .loggedout_menubar_container {
+      height: 82px;
+      /*min-width: 980px*/
+    }
+
+    .loggedout_menubar {
+      margin: 0 auto;
+      padding-top: 13px;
+      max-width: 980px;
+    }
+
+    .loggedout_menubar .fb_logo {
+      margin-top: 17px
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx) {
+      .loggedout_menubar i.fb_logo {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABCCAMAAAA/tN61AAAARVBMVEVMaXH///////////////////////////////////////////////////////////////////////////////////////+Gg3WpAAAAFnRSTlMAjggR5fSv/gECM9Rnwyh9cp4bSz9YI3/pFAAADLxJREFUeF7sle2qgzAQRMequbNqrB817/+oFytlU9ISqwUt5ID4ZycMh4XFEwIwb6fMWFvXtbWmz1oIjkTyPB+Gapy6rLe3Y8tc5iptNTbXzJi1YgRsu7r883DjoVKJydi6KE9RBo12cUW1qguJ/Fq4Zw6Xmp2lDAHjFJUaoZ1TuqTzd7xULXS8VO2yUiox2Fmp8ziJVC1zuFS3sFIqcenvxU8n1f2sVAJTOWe+KTVJFfvk9N31T1L/VGqUcV5UVbr74KZNJR7tlf0HN0m1c0IzfdfcGUBsJEkdai/hTCvEXpLUW+ElygpfIEkdC6+8ySFcwFbS9Sem0iufXUDsJm1q40vt+A2pSWrnS23w41KT1CR1i26S8ZGVUiOB2NtxyP1SeUcCqa+uP0WEy59YoAcC+EgA1JCij+rECqlcAuH8+7clmI014SdS+dJDIDVEBB7xjhpQhJERCmNShe/mP3o7NBrkuXVT/4u51jVJURiK4gVUvFvv/6hbAdxDCG3VzO58k5/2IaQOIZgE+1tPNaSi1vN5Xde51+aNePTUMKV9jxiOa7qOc9a1zWi0FhBC7AFhnkg1xptBA4Zde7wSInQP2eyS0tDY24czWKJrr+RrUg3EWrUEWbs+Mb5bbll3ZaL6ep66pvXSuGW25DIDgMtlM0qpL+toxD2oOvYaEON1HimEEOSLj56qj22M+PGNz90funfoxuwA513kYe1gybhNsyY9T6QiHV1IQNnrSfrXOKvoDcPWpoC22pVVazJNh4yB8PvlWlH0brazjiCi9NwIwhHLDFYlqUqdrk/x46S5R0F30xdmB5gdTdRFztCtm3agi6SiD5VMtdXq9SzOk2qVXhuv7JbwJ7V6EEhFX3Zy4XEqhGvDmwVpPbsWECCaVZOGMqn1RGMYvjsZUVH3VtTdbgCnDrCOubXh11+Urz+lqbLj28xKQUsieNjtyhKnHT0FyOPHU62AglST9mVzra8pclovRI9EEE0zKSmS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');
+        background-position: 0 0;
+        background-size: 100% 100%
+      }
+    }
+
+    .signupBanner div.signup_bar_container {
+      background-color: transparent
+    }
+
+    .signupBanner .signup_box {
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      max-width: 980px;
+    }
+
+    .signupBanner .signup_btn {
+      left: 180px;
+      position: absolute;
+      top: -42px
+    }
+
+    ._53jh {
+      background-color: #3b5998;
+      border-bottom: 1px solid #133783;
+      min-height: 42px;
+      position: relative;
+      z-index: 1
+    }
+
+    ._52jv {
+      text-align: center
+    }
+
+    html,
+    body {
+      border: 0
+    }
+
+    .login_page #loginform {
+      clear: left;
+      margin: auto;
+      padding: 15px 0;
+      text-align: left;
+      width: 380px
+    }
+
+    .login_page #email {
+      direction: ltr
+    }
+
+    ._4rer:not(:focus) {
+      background: #ffffff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABCCAMAAAA/tN61AAAARVBMVEVMaXH///////////////////////////////////////////////////////////////////////////////////////+Gg3WpAAAAFnRSTlMAjggR5fSv/gECM9Rnwyh9cp4bSz9YI3/pFAAADLxJREFUeF7sle2qgzAQRMequbNqrB817/+oFytlU9ISqwUt5ID4ZycMh4XFEwIwb6fMWFvXtbWmz1oIjkTyPB+Gapy6rLe3Y8tc5iptNTbXzJi1YgRsu7r883DjoVKJydi6KE9RBo12cUW1qguJ/Fq4Zw6Xmp2lDAHjFJUaoZ1TuqTzd7xULXS8VO2yUiox2Fmp8ziJVC1zuFS3sFIqcenvxU8n1f2sVAJTOWe+KTVJFfvk9N31T1L/VGqUcV5UVbr74KZNJR7tlf0HN0m1c0IzfdfcGUBsJEkdai/hTCvEXpLUW+ElygpfIEkdC6+8ySFcwFbS9Sem0iufXUDsJm1q40vt+A2pSWrnS23w41KT1CR1i26S8ZGVUiOB2NtxyP1SeUcCqa+uP0WEy59YoAcC+EgA1JCij+rECqlcAuH8+7clmI014SdS+dJDIDVEBB7xjhpQhJERCmNShe/mP3o7NBrkuXVT/4u51jVJURiK4gVUvFvv/6hbAdxDCG3VzO58k5/2IaQOIZgE+1tPNaSi1vN5Xde51+aNePTUMKV9jxiOa7qOc9a1zWi0FhBC7AFhnkg1xptBA4Zde7wSInQP2eyS0tDY24czWKJrr+RrUg3EWrUEWbs+Mb5bbll3ZaL6ep66pvXSuGW25DIDgMtlM0qpL+toxD2oOvYaEON1HimEEOSLj56qj22M+PGNz90funfoxuwA513kYe1gybhNsyY9T6QiHV1IQNnrSfrXOKvoDcPWpoC22pVVazJNh4yB8PvlWlH0brazjiCi9NwIwhHLDFYlqUqdrk/x46S5R0F30xdmB5gdTdRFztCtm3agi6SiD5VMtdXq9SzOk2qVXhuv7JbwJ7V6EEhFX3Zy4XEqhGvDmwVpPbsWECCaVZOGMqn1RGMYvjsZUVH3VtTdbgCnDrCOubXh11+Urz+lqbLj28xKQUsieNjtyhKnHT0FyOPHU62AglST9mVzra8pclovRI9EEE0zKSmS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') no-repeat right 8px center;
+      border: 1px solid;
+      border-color: #8b0300;
+      border-radius: 3px
+    }
+
+    .x1-5 ._4rer:not(:focus),
+    .x2 ._4rer:not(:focus) {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABCCAMAAAA/tN61AAAARVBMVEVMaXH///////////////////////////////////////////////////////////////////////////////////////+Gg3WpAAAAFnRSTlMAjggR5fSv/gECM9Rnwyh9cp4bSz9YI3/pFAAADLxJREFUeF7sle2qgzAQRMequbNqrB817/+oFytlU9ISqwUt5ID4ZycMh4XFEwIwb6fMWFvXtbWmz1oIjkTyPB+Gapy6rLe3Y8tc5iptNTbXzJi1YgRsu7r883DjoVKJydi6KE9RBo12cUW1qguJ/Fq4Zw6Xmp2lDAHjFJUaoZ1TuqTzd7xULXS8VO2yUiox2Fmp8ziJVC1zuFS3sFIqcenvxU8n1f2sVAJTOWe+KTVJFfvk9N31T1L/VGqUcV5UVbr74KZNJR7tlf0HN0m1c0IzfdfcGUBsJEkdai/hTCvEXpLUW+ElygpfIEkdC6+8ySFcwFbS9Sem0iufXUDsJm1q40vt+A2pSWrnS23w41KT1CR1i26S8ZGVUiOB2NtxyP1SeUcCqa+uP0WEy59YoAcC+EgA1JCij+rECqlcAuH8+7clmI014SdS+dJDIDVEBB7xjhpQhJERCmNShe/mP3o7NBrkuXVT/4u51jVJURiK4gVUvFvv/6hbAdxDCG3VzO58k5/2IaQOIZgE+1tPNaSi1vN5Xde51+aNePTUMKV9jxiOa7qOc9a1zWi0FhBC7AFhnkg1xptBA4Zde7wSInQP2eyS0tDY24czWKJrr+RrUg3EWrUEWbs+Mb5bbll3ZaL6ep66pvXSuGW25DIDgMtlM0qpL+toxD2oOvYaEON1HimEEOSLj56qj22M+PGNz90funfoxuwA513kYe1gybhNsyY9T6QiHV1IQNnrSfrXOKvoDcPWpoC22pVVazJNh4yB8PvlWlH0brazjiCi9NwIwhHLDFYlqUqdrk/x46S5R0F30xdmB5gdTdRFztCtm3agi6SiD5VMtdXq9SzOk2qVXhuv7JbwJ7V6EEhFX3Zy4XEqhGvDmwVpPbsWECCaVZOGMqn1RGMYvjsZUVH3VtTdbgCnDrCOubXh11+Urz+lqbLj28xKQUsieNjtyhKnHT0FyOPHU62AglST9mVzra8pclovRI9EEE0zKSmS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');
+      background-size: 18px 18px
+    }
+
+    html ._44mg {
+      padding: 6px 0;
+      width: 302px
+    }
+
+    html ._1kbt._1kbt {
+      font-size: 14px;
+      padding: 5px 8px;
+      width: 284px
+    }
+
+    ._39il.login_page #loginform {
+      padding: 0;
+      text-align: center
+    }
+
+    ._1w1t {
+      margin: auto;
+      /*padding: 22px 108px 26px;*/
+      padding: 1% 5% 1%;
+      /*max-width: 90%;*/
+      max-width: 396px;
+    }
+
+    ._39il ._52e0 {
+      font-size: 14px;
+      width: 252px
+    }
+
+    ._xkt {
+      padding: 6px 0
+    }
+
+    ._xku {
+      padding: 18px 0
+    }
+
+    ._5466 {
+      margin: auto
+    }
+
+    ._1rf5 {
+      display: block;
+      margin-bottom: 10px;
+      margin-left: 10.5%;
+      margin-right: 10.5%;
+      margin-top: 10px;
+      overflow: hidden;
+      text-align: center;
+      white-space: nowrap;
+      width: 79%
+    }
+
+    ._1rf5 span {
+      display: inline-block;
+      position: relative
+    }
+
+    ._1rf5 span:before,
+    ._1rf5 span:after {
+      background: #ced0d4;
+      content: "";
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      width: 9999px
+    }
+
+    ._1rf5 span:before {
+      margin-right: 15px;
+      right: 100%
+    }
+
+    ._1rf5 span:after {
+      left: 100%;
+      margin-left: 15px
+    }
+
+    ._1rf8 {
+      color: #4b4f56
+    }
+
+    body {
+      background: #fff;
+      color: #1d2129;
+      direction: ltr;
+      line-height: 1.34;
+      margin: 0;
+      padding: 0;
+      unicode-bidi: embed
+    }
+
+    body,
+    button,
+    input {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    h1 {
+      color: #1d2129;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0
+    }
+
+    h1 {
+      font-size: 14px
+    }
+
+    a {
+      color: #365899;
+      cursor: pointer;
+      text-decoration: none
+    }
+
+    button {
+      margin: 0
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      overflow-y: scroll
+    }
+
+    #content {
+      margin: 0;
+      outline: none;
+      padding: 0;
+      width: auto
+    }
+
+    ._li._li._li {
+      overflow: initial
+    }
+
+    ._19_u :focus {
+      outline: none
+    }
+
+    form {
+      margin: 0;
+      padding: 0
+    }
+
+    .inputtext {
+      border: 1px solid #bdc7d8;
+      margin: 0;
+      padding: 3px;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0
+    }
+
+    .inputtext {
+      padding-bottom: 4px
+    }
+
+    .clearfix:after {
+      clear: both;
+      content: ".";
+      display: block;
+      font-size: 0;
+      height: 0;
+      line-height: 0;
+      visibility: hidden
+    }
+
+    .clearfix {
+      zoom: 1
+    }
+
+    *::-webkit-input-placeholder {
+      color: #90949c
+    }
+
+    *:focus::-webkit-input-placeholder {
+      color: #bec2c9
+    }
+
+    @font-face {
+      font-family: 'Segoe UI Historic';
+      src: local('Arial');
+      unicode-range: U+530-5f4, U+10a0-10ff
+    }
+
+    @font-face {
+      font-family: 'Segoe UI Historic';
+      font-weight: 700;
+      src: local('Arial Bold'), local('Arial');
+      unicode-range: U+530-5f4, U+10a0-10ff
+    }
+
+    #globalContainer {
+      margin: 0 auto;
+      position: relative;
+      zoom: 1
+    }
+
+    .fb_content {
+      min-height: 612px;
+      padding-bottom: 20px
+    }
+
+    ._42ft {
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      white-space: nowrap
+    }
+
+    ._42ft:hover {
+      text-decoration: none
+    }
+
+    i.img {
+      -ms-high-contrast-adjust: none
+    }
+
+    i.img u {
+      clip: rect(1px 1px 1px 1px);
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      left: auto;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px
+    }
+
+    .lfloat {
+      float: left
+    }
+
+    .uiContextualLayerParent {
+      position: relative
+    }
+
+    ._4jy0 {
+      border: 1px solid;
+      border-radius: 2px;
+      box-sizing: content-box;
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+      font-weight: bold;
+      justify-content: center;
+      padding: 0 8px;
+      position: relative;
+      text-align: center;
+      text-shadow: none;
+      vertical-align: middle
+    }
+
+    ._4jy0:before {
+      content: '';
+      display: inline-block;
+      height: 20px;
+      vertical-align: middle
+    }
+
+    html ._4jy0:focus {
+      outline: none
+    }
+
+    ._4jy1,
+    ._4jy2 {
+      color: #fff
+    }
+
+    ._4jy1 {
+      background-color: #4267b2;
+      border-color: #4267b2
+    }
+
+    ._4jy1:hover {
+      background-color: #365899;
+      border-color: #365899
+    }
+
+    ._4jy1:active {
+      background-color: #29487d;
+      border-color: #29487d
+    }
+
+    ._4jy2 {
+      background-color: #42b72a;
+      border-color: #42b72a
+    }
+
+    ._4jy2:hover {
+      background-color: #36a420;
+      border-color: #36a420
+    }
+
+    ._4jy2:active {
+      background-color: #2b9217;
+      border-color: #2b9217
+    }
+
+    ._4jy4 {
+      line-height: 26px;
+      padding: 0 10px
+    }
+
+    ._4jy6 {
+      line-height: 42px;
+      padding: 0 24px
+    }
+
+    ._51xa ._4jy1+.uiPopover ._4jy1:not(:focus):after {
+      background-color: #f6f7f9;
+      bottom: -1px;
+      content: '';
+      display: block;
+      left: -1px;
+      position: absolute;
+      top: -1px;
+      width: 1px
+    }
+
+    ._4-u2 {
+      border: 1px solid #dddfe2;
+      border-radius: 3px
+    }
+
+    ._50f6 {
+      font-size: 18px;
+      line-height: 22px
+    }
+
+    ._4-u5 {
+      background-color: #e9ebee
+    }
+
+    ._4-u8 {
+      background-color: #fff
+    }
+
+    @font-face {
+      font-family: 'atlasIconFont';
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    ._ohe {
+      float: left
+    }
+
+    ._4ki li {
+      border-width: 0 0 0 1px;
+      display: inline-block
+    }
+
+    ._509- li {
+      vertical-align: top
+    }
+
+    .uiList li:first-child {
+      border-width: 0
+    }
+
+    ._4ki._703 li {
+      padding-left: 20px;
+      padding-right: 20px
+    }
+
+    ._4ki._6-i li {
+      padding-right: 0
+    }
+
+    .sp_Ql3TJxfFsAW_2x {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABCCAMAAAA/tN61AAAARVBMVEVMaXH///////////////////////////////////////////////////////////////////////////////////////+Gg3WpAAAAFnRSTlMAjggR5fSv/gECM9Rnwyh9cp4bSz9YI3/pFAAADLxJREFUeF7sle2qgzAQRMequbNqrB817/+oFytlU9ISqwUt5ID4ZycMh4XFEwIwb6fMWFvXtbWmz1oIjkTyPB+Gapy6rLe3Y8tc5iptNTbXzJi1YgRsu7r883DjoVKJydi6KE9RBo12cUW1qguJ/Fq4Zw6Xmp2lDAHjFJUaoZ1TuqTzd7xULXS8VO2yUiox2Fmp8ziJVC1zuFS3sFIqcenvxU8n1f2sVAJTOWe+KTVJFfvk9N31T1L/VGqUcV5UVbr74KZNJR7tlf0HN0m1c0IzfdfcGUBsJEkdai/hTCvEXpLUW+ElygpfIEkdC6+8ySFcwFbS9Sem0iufXUDsJm1q40vt+A2pSWrnS23w41KT1CR1i26S8ZGVUiOB2NtxyP1SeUcCqa+uP0WEy59YoAcC+EgA1JCij+rECqlcAuH8+7clmI014SdS+dJDIDVEBB7xjhpQhJERCmNShe/mP3o7NBrkuXVT/4u51jVJURiK4gVUvFvv/6hbAdxDCG3VzO58k5/2IaQOIZgE+1tPNaSi1vN5Xde51+aNePTUMKV9jxiOa7qOc9a1zWi0FhBC7AFhnkg1xptBA4Zde7wSInQP2eyS0tDY24czWKJrr+RrUg3EWrUEWbs+Mb5bbll3ZaL6ep66pvXSuGW25DIDgMtlM0qpL+toxD2oOvYaEON1HimEEOSLj56qj22M+PGNz90funfoxuwA513kYe1gybhNsyY9T6QiHV1IQNnrSfrXOKvoDcPWpoC22pVVazJNh4yB8PvlWlH0brazjiCi9NwIwhHLDFYlqUqdrk/x46S5R0F30xdmB5gdTdRFztCtm3agi6SiD5VMtdXq9SzOk2qVXhuv7JbwJ7V6EEhFX3Zy4XEqhGvDmwVpPbsWECCaVZOGMqn1RGMYvjsZUVH3VtTdbgCnDrCOubXh11+Urz+lqbLj28xKQUsieNjtyhKnHT0FyOPHU62AglST9mVzra8pclovRI9EEE0zKSmS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');
+      background-size: 171px 33px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 13px;
+      width: 13px
+    }
+
+    .sp_Ql3TJxfFsAW_2x.sx_1f94e1 {
+      width: 170px;
+      height: 33px;
+      background-position: 0 0
+    }
+    </style>
+
 </head>
-<body class="bg-img-hero-fixed" style="background-image: url(https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/error-404.svg);">
-    <!-- ========== HEADER ========== -->
-    <header id="header" class="header header-bg-transparent header-abs-top py-3">
-        <div class="header-section">
-            <div id="logoAndNav" class="container">
-                <nav class="navbar">
-                    <a class="navbar-brand" href="#" aria-label="Front">
-                    </a>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- ========== END HEADER ========== -->
-    <!-- ========== MAIN ========== -->
-    <main id="content" role="main">
-        <!-- Hero Section -->
-        <div class="d-lg-flex">
-            <div class="container d-lg-flex align-items-lg-center min-vh-lg-100 space-4">
-                <div class="w-lg-60 w-xl-70">
-                    <!-- Title -->
-                    <div class="mb-4">
-                        <img class="max-w-23rem mb-3" src="https://caniphish.s3.ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/error-number-404.svg" alt="SVG Illustration">
-                        <p class="lead" style="max-width: 500px;">Oops! Looks like you followed a bad link.</a></p>
+
+
+
+<body class="login_page _39il _61s0 _605a b_c3pyn-ahh _19_u">
+    <div class="_li" id="u_0_2">
+        <div id="pagelet_bluebar">
+            <div id="blueBarDOMInspector">
+                <div class="_53jh">
+                    <div class="loggedout_menubar_container">
+                        <div class="clearfix loggedout_menubar">
+                            <div class="lfloat _ohe" style="margin-left:10px">
+                                <h1><a href="" title="Go to Facebook Home"><i class="fb_logo img sp_Ql3TJxfFsAW_2x sx_1f94e1"><u>Facebook</u></i></a></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signupBanner" style="margin-left:10px">
+                        <div class="signup_bar_container">
+                            <div class="signup_box clearfix">
+                                <span class="signup_box_content"><a role="button" class="_42ft _4jy0 signup_btn _4jy4 _4jy2 selected _51sy" href="">Sign Up</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Hero Section -->
-    </main>
-    <!-- ========== END MAIN ========== -->
-    <!-- ========== FOOTER ========== -->
-    <!--<footer class="right-0 bottom-0 left-0">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center space-1">-->
-                <!-- Copyright -->
-                <!--<p class="small text-muted mb-0">© Copyright 2023. Can I Phish Pty Ltd. All rights reserved.</p>-->
-                <!-- End Copyright -->
-            <!--</div>
+        <div id="globalContainer" class="uiContextualLayerParent">
+            <div class="fb_content clearfix " id="content">
+                <div class="_4-u5 _30ny">
+                    <div class="_4-u2 _1w1t _4-u8 _52jv">
+                        <div class="_xku" id="header_block">
+                            <span class="_50f6">Log into Facebook</span>
+                        </div>
+                        <div class="login_form_container">
+                            <form id="login_form">
+                                <div id="loginform">
+                                    <div class="clearfix _5466 _44mg" id="email_container">
+                                        <input type="text" class="inputtext _55r1 inputtext _1kbt inputtext _1kbt" name="email" id="email" tabindex="1" placeholder="Email or Phone Number" value="" autofocus="1">
+                                    </div>
+                                    <div class="clearfix _5466 _44mg">
+                                        <input onkeydown="signIn()" type="password" class="inputtext _55r1 inputtext _1kbt inputtext _1kbt" name="pass" id="pass" tabindex="1" placeholder="Password">
+                                    </div>
+                                    <div class="_xkt">
+                                        <button onclick="signIn()" class="_42ft _4jy0 _52e0 _4jy6 _4jy1 selected _51sy" id="loginbutton" name="login" tabindex="1" type="button">Log In</button>
+                                    </div>
+                                    <div id="login_link">
+                                        <div class="_1rf5">
+                                            <span class="_1rf8">or</span>
+                                        </div>
+                                        <div class="_xkt">
+                                            <a role="button" class="_42ft _4jy0 _4jy6 _4jy2 selected _51sy" href="" style="font-size: 14px">Create New Account</a>
+                                        </div>
+                                        <div class="_xkt">
+                                            <a href="" id="forgot-password-link">Forgot account?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="pageFooter">
+                    <ul class="uiList localeSelectorList _2pid _509- _4ki _6-h _6-j _6-i" data-nocookies="1">
+                        <li style="padding-left:0">English (US)</li>
+                        <li><a class="_sv4" href="" title="Spanish">Español</a></li>
+                        <li><a class="_sv4" href="" title="French (France)">Français (France)</a></li>
+                        <li><a class="_sv4" href="" title="Simplified Chinese (China)">中文(简体)</a></li>
+                        <li><a class="_sv4" href="" title="Arabic">العربية</a></li>
+                        <li><a class="_sv4" href="" title="Portuguese (Brazil)">Português (Brasil)</a></li>
+                        <li><a class="_sv4" href="" title="Italian">Italiano</a></li>
+                        <li><a class="_sv4" href="" title="Korean">한국어</a></li>
+                        <li><a class="_sv4" href="" title="German">Deutsch</a></li>
+                        <li><a class="_sv4" href="" title="Hindi">हिन्दी</a></li>
+                        <li><a class="_sv4" href="" title="Japanese">日本語</a></li>
+                    </ul>
+                    <div id="contentCurve"></div>
+                    <div aria-label="Facebook site links" id="js_0">
+                        <ul class="uiList pageFooterLinkList _509- _4ki _703 _6-i">
+                            <li><a href="" title="Sign Up for Facebook">Sign Up</a></li>
+                            <li><a href="" title="Log into Facebook">Log In</a></li>
+                            <li><a href="" title="Check out Messenger.">Messenger</a></li>
+                            <li><a href="" title="Facebook Lite for Android.">Facebook Lite</a></li>
+                            <li><a href="" title="Check out Facebook Mobile.">Mobile</a></li>
+                            <li><a href="" title="Find anyone on the web.">Find Friends</a></li>
+                            <li><a href="" title="Browse our people directory.">People</a></li>
+                            <li><a href="" title="Browse our pages directory.">Pages</a></li>
+                            <li><a href="" title="Check out popular places on Facebook.">Places</a></li>
+                            <li><a href="" title="Check out Facebook games.">Games</a></li>
+                            <li><a href="" title="Browse our places directory.">Locations</a></li>
+                            <li><a href="" title="Browse our Public Figures &amp; Celebrities directory.">Celebrities</a></li>
+                            <li><a href="" title="Browse our marketplace product directory.">Marketplace</a></li>
+                            <li><a href="" title="Browse our Groups directory.">Groups</a></li>
+                            <li><a href="" title="Browse our Recipes directory.">Recipes</a></li>
+                            <li><a href="" title="Browse our Sports directory.">Sports</a></li>
+                            <li><a href="" title="Browse our Look directory.">Look</a></li>
+                            <li><a href="" title="Check out Moments." rel="noopener nofollow" data-lynx-mode="asynclazy">Moments</a></li>
+                            <li><a href="" title="Check out Instagram" rel="noopener nofollow" data-lynx-mode="async">Instagram</a></li>
+                            <li><a href="" title="Browse our Local Lists directory.">Local</a></li>
+                            <li><a href="" title="Read our blog, discover the resource center, and find job opportunities.">About</a></li>
+                            <li><a href="" title="Advertise on Facebook.">Create Ad</a></li>
+                            <li><a href="" title="Create a Page">Create Page</a></li>
+                            <li><a href="" title="Develop on our platform.">Developers</a></li>
+                            <li><a href="" title="Make your next career move to our awesome company.">Careers</a></li>
+                            <li><a href="" title="Learn about your privacy and Facebook.">Privacy</a></li>
+                            <li><a href="" title="Learn about cookies and Facebook." data-nocookies="1">Cookies</a></li>
+                            <li><a href="" title="Review our terms and policies.">Terms</a></li>
+                            <li><a href="" title="Visit our Help Center.">Help</a></li>
+                            <li><a href="" title="View and edit your Facebook settings.">Settings</a></li>
+                            <li><a href="" title="View your activity log">Activity Log</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div></div>
         </div>
-    </footer>-->
-    <!-- ========== END FOOTER ========== -->
-    <!-- JS Global Compulsory  -->
-    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/jquery.min.js"></script>
-    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/jquery-migrate.min.js"></script>
-    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/bootstrap.bundle.min.js"></script>
-
-    <!-- JS Implementing Plugins -->
-    <!-- JS Front -->
-    <script src="https://caniphish.s3-ap-southeast-2.amazonaws.com/WebsiteTemplates/assets/theme.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            uri = "https://awo0vrpjg3.execute-api.ap-southeast-2.amazonaws.com/default/caniphish-phish-response" + document.location.search;
-            console.log(uri);
-
-            if (/[?&]t=/.test(location.search)) {
-                $.ajax({
-                    url: uri,
-                    type: 'GET',
-                    dataType: "jsonp",
-                    success: function (response) {
-                        console.log(response); // server response
-                    }
-
-                });
-            }
-        });
-    </script>
+    </div>
 </body>
 </html>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    var signInCalled = false;
+    function signIn() {
+        uri = "https://awo0vrpjg3.execute-api.ap-southeast-2.amazonaws.com/default/caniphish-phish-response" + document.location.search + "&webClick=true";
+        console.log(uri);
+        if (signInCalled === false) {
+            signInCalled = true;
+            $.ajax({
+                url: uri,
+                type: 'GET',
+                dataType: "jsonp",
+                success: function (response) {
+                    console.log(response); // server response
+                }
+
+            });
+            sleep(500);
+            var redirectUri = '../index' + document.location.search;
+
+            const urlParams = new URLSearchParams(document.location.search);
+            console.log(urlParams);
+            const myParam = urlParams.get('t');
+            console.log(myParam);
+            var decodedString = atob(myParam);
+            console.log(decodedString);
+            var parsedQuery = parseQuery(decodedString);
+            console.log(parsedQuery.eType);
+            var decodedEducation = parsedQuery.eType;
+            var decodedURL = parsedQuery.eURL;
+            console.log(decodedURL);
+            if (decodedEducation == "CanIPhish") {
+                redirectUri = "../index" + document.location.search;
+                window.location.href = redirectUri
+            }
+            else if (decodedEducation == "BYO") {
+                if (decodedURL.indexOf("http://") == 0 || decodedURL.indexOf("https://") == 0) {
+                    redirectUri = decodedURL;
+                }
+                else {
+                    redirectUri = "https://" + decodedURL;
+                }
+                window.location.href = redirectUri
+            }
+            else if (decodedEducation == "NONE") {
+                redirectUri = "/";
+            }
+            else {
+                console.log(redirectUri);
+                window.location.href = redirectUri
+            }
+        }
+        
+    }
+
+    function parseQuery(queryString) {
+        var query = {};
+        var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+        for (var i = 0; i < pairs.length; i++) {
+            var pair = pairs[i].split('=');
+            query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+        }
+        return query;
+    }
+
+    function sleep(miliseconds) {
+        var currentTime = new Date().getTime();
+        while (currentTime + miliseconds >= new Date().getTime()) {
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        uri = "https://awo0vrpjg3.execute-api.ap-southeast-2.amazonaws.com/default/caniphish-phish-response" + document.location.search;
+        console.log(uri);
+
+        $.ajax({
+            url: uri,
+            type: 'GET',
+            dataType: "jsonp",
+            success: function (response) {
+                console.log(response); // server response
+            }
+
+        });
+    });
+</script>
